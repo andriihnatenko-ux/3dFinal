@@ -1,0 +1,44 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { overflow: hidden; background: #05030c; font-family: 'Segoe UI', sans-serif; }
+
+.webgl { position: fixed; top: 0; left: 0; outline: none; }
+
+#overlay {
+    position: fixed; inset: 0; z-index: 10;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+    background: radial-gradient(circle at center, #1d0f3a 0%, #05030c 75%);
+    color: #e8e8ff; text-align: center; padding: 20px;
+    transition: opacity 1s ease;
+}
+#overlay.hidden { opacity: 0; pointer-events: none; }
+
+#overlay h1 {
+    font-size: clamp(2.4rem, 8vw, 6rem); letter-spacing: 0.3em; color: #ff4fd8;
+    text-shadow: 0 0 12px #ff4fd8, 0 0 36px #ff4fd8, 0 0 70px #8a2be2;
+}
+#overlay h2 { font-weight: 300; letter-spacing: 0.35em; color: #7fe9ff; text-shadow: 0 0 10px #00cfff; font-size: clamp(0.8rem, 2vw, 1.3rem); }
+#overlay p { color: #b9a8ff; }
+#overlay small { color: #8a8fb5; max-width: 620px; line-height: 1.7; }
+
+#startBtn {
+    padding: 14px 46px; font-size: 1.1rem; letter-spacing: 0.2em; cursor: pointer;
+    color: #7fe9ff; background: transparent; border: 2px solid #7fe9ff; border-radius: 6px;
+    box-shadow: 0 0 15px #00cfff55, inset 0 0 15px #00cfff33; transition: 0.25s;
+}
+#startBtn:hover:not(:disabled) { background: #7fe9ff; color: #05030c; box-shadow: 0 0 30px #00cfff; }
+#startBtn:disabled { opacity: 0.35; cursor: wait; }
+
+#toast {
+    position: fixed; top: 18px; left: 50%; transform: translate(-50%, -80px); z-index: 20;
+    padding: 12px 22px; border-radius: 8px; max-width: 90vw; text-align: center;
+    background: rgba(20, 8, 40, 0.92); color: #ffd0f6; border: 1px solid #ff4fd8;
+    box-shadow: 0 0 20px #ff4fd855; transition: transform 0.4s ease; pointer-events: none;
+}
+#toast.show { transform: translate(-50%, 0); }
+
+#help {
+    position: fixed; left: 50%; bottom: 10px; transform: translateX(-50%); z-index: 5;
+    color: #8a8fb5; font-size: 12px; letter-spacing: 0.05em; pointer-events: none; text-align: center;
+    padding: 0 10px;
+}

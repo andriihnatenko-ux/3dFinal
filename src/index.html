@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON DECK — Virtual DJ Studio (Three.js)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+
+    <div id="overlay">
+        <h1>NEON DECK</h1>
+        <h2>Virtual DJ Studio · Sound Visualizer</h2>
+        <p id="status">Завантаження моделі шолома…</p>
+        <button id="startBtn" disabled>Запустити студію</button>
+        <small>
+            Миша: обертання / зум камери · Тягни фейдери та крутилки · Тисни кнопки й пади<br>
+            Пробіл — play/pause · ← → — трек · 1–6 — вибір треку · B — скинути кубики
+        </small>
+    </div>
+
+    <div id="toast"></div>
+    <div id="help">Пробіл — play/pause · ← → — трек · 1–6 — вибір · B — кубики · Клік по кубиках — поштовх</div>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
